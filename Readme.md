@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Tatyana Novoseltseva](https://up.htmlacademy.ru/adaptive/24/user/555).
-* Наставник: `Неизвестно`.
+* Наставник: [Мария Наг](https://htmlacademy.ru/profile/id47061).
 
 ---
 
