@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body class="page-body">
+    <header class="page-header page-header--form">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="" width="74" height="23" alt="Главная страница сайта приложения Пинк.">
+        </a>
+        <nav class="page-header__navigation main-navigation">
+          <button class="main-navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+          </button>
+          <ul class="main-navigation__list site-list">
+            <li class="site-list__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a>Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <h1 class="page-header__header page-header__header--form">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    </header>
+
+    <main class="page-main">
+      <section class="competition">
+        <h2 class="visually-hidden">Форма регистрации участников конкурса</h2>
+        <p class="competition__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+      </section>
+      <form class="competition__form" name="competition__form" method="post" action="https://echo.htmlacademy.ru">
+        <fieldset class="competition__fields personal-data">
+          <legend class="visually-hidden">Личные данные</legend>
+          <p class="personal-data__field">
+            <label class="personal-data__label" for="surname">Фамилия:</label>
+            <input class="personal-data__input" id="surname" type="text" name="surname" placeholder="Укажите фамилию *">
+          </p>
+          <p class="personal-data__field">
+            <label class="personal-data__label" for="name">Имя:</label>
+            <input class="personal-data__input" id="name" type="text" name="name" placeholder="Введите ваше имя *">
+          </p>
+          <p>
+            <label class="personal-data__label" for="second-name">Отчество:</label>
+            <input class="personal-data__input" id="second-name" type="text" name="second-name" placeholder="Ну и отчество тоже">
+          </p>
+        </fieldset>
+        <fieldset class="competition__fields">
+          <legend class="competition__legend">Ваши безбашенные достижения в путешествии</legend>
+          <ul class="competition__achievements achievements-list">
+            <li class="achievements-list__item">
+              <input class="achievements-list__input" id="selfie" type="checkbox" name="achievements" value="selfie" checked>
+              <label class="achievements-list__label" for="selfie">Сделал селфи с акулой</label>
+            </li>
+            <li class="achievements-list__item">
+              <input class="achievements-list__input" id="beach" type="checkbox" name="achievements" value="beach" checked>
+              <label class="achievements-list__label" for="beach">Обгорел на пляже</label>
+            </li>
+            <li class="achievements-list__item">
+              <input class="achievements-list__input" id="chuck" type="checkbox" name="achievements" value="chuck">
+              <label class="achievements-list__label" for="chuck">Видел Чака Норриса</label>
+            </li>
+            <li class="achievements-list__item">
+              <input class="achievements-list__input" id="souvenirs" type="checkbox" name="achievements" value="souvenirs">
+              <label class="achievements-list__label" for="souvenirs">Накупил сувениров</label>
+            </li>
+            <li class="achievements-list__item">
+              <input class="achievements-list__input" id="tower" type="checkbox" name="achievements" value="tower" checked>
+              <label class="achievements-list__label" for="tower">Удержал башню</label>
+            </li>
+            <li class="achievements-list__item">
+              <input class="achievements-list__input" id="hotel" type="checkbox" name="achievements" value="hotel">
+              <label class="achievements-list__label" for="hotel">Разгромил отель</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="competition__fields contact-data">
+          <legend class="visually-hidden">Контактные данные</legend>
+          <p class="contact-data__field">
+            <label class="contact-data__label" for="phone">Номер телефона</label>
+            <input class="contact-data__input" id="phone" type="tel" name="phone" placeholder="Номер, пожалуйста">
+          </p>
+          <p class="contact-data__field">
+            <label class="contact-data__label" for="email">Адрес почты</label>
+            <input class="contact-data__input" id="email" type="email" name="email" placeholder="Введите почту *">
+          </p>
+        </fieldset>
+
+        <fieldset class="competition__fields">
+          <legend class="competition__legend">С каким приложением путешествовали?</legend>
+          <ul class="competition__applications applications-list">
+            <li class="applications-list__item">
+              <input class="applications-list__input" id="iOS" type="radio" name="applications" value="iOS" checked>
+              <label class="applications-list__label" for="iOS">Pink для iOS</label>
+            </li>
+            <li class="applications-list__item">
+              <input class="applications-list__input" id="android" type="radio" name="applications" value="android">
+              <label class="applications-list__label" for="android">Pink на Android</label>
+            </li>
+            <li class="applications-list__item">
+              <input class="applications-list__input" id="windows" type="radio" name="applications" value="windows">
+              <label class="applications-list__label" for="windows">Windows Phone</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="competition__fields emotions">
+          <legend class="emotions__legend">Опишите свои эмоции</legend>
+          <textarea name="emotions__textarea" placeholder="Можно прям в красках, не
+          стесняясь в выражениях"></textarea>
+        </fieldset>
+        <button class="competition__button" type="submit">Отправить форму</button>
+        <p class="competition__footnote">* — обязательные поля</p>
+      </form>
+    </main>
+
+    <footer class="page-footer page-footer--form">
+      <img class="page-footer__logo-image" width="145" height="40" src="" alt="Главная страница сайта приложения Пинк.">
+      <ul class="page-footer__socials socials-list">
+        <li class="socials-list__item socials-list__item--twitter">
+          <a href="#"><span class="visually-hidden">Перейти в Twitter приложения Пинк.</span></a>
+        </li>
+        <li class="socials-list__item socials-list__item--facebook">
+          <a href="#"><span class="visually-hidden">Перейти в Facebook приложения Пинк.</span></a>
+        </li>
+        <li class="socials-list__item socials-list__item--youtube">
+          <a href="#"><span class="visually-hidden">Перейти в Youtube приложения Пинк.</span></a>
+        </li>
+      </ul>
+      <div class="page-footer__copyrights copyrights">
+        <p class="copyrights__text">Разработано</p>
+        <a class="copyrights__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
+      </div>
+    </footer>
+
+  </body>
+</html>
