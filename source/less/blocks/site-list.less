@@ -1,0 +1,24 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-list__item{
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.site-list__href{
+  color: @white;
+  text-decoration: none;
+  &:hover {
+    color: @pink;
+  }
+  &:active {
+    color: fade(@pink, 30);
+  }
+}

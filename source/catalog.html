@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -16,16 +17,16 @@
           </button>
           <ul class="main-navigation__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="site-list__href" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__href">Фотографии</a>
             </li>
             <li class="site-list__item">
-              <a>Фотографии</a>
+              <a class="site-list__href" href="form.html">Конкурс</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Конкурс</a>
-            </li>
-            <li class="site-list__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+              <a class="site-list__href" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -128,8 +129,8 @@
           <button class="editor__tools editor__tools--contrast editor__tools--inactive" type="button">Контраст</button>
           <div class="editor__scale"></div>
         </div>
-        <button class="editor__post editor__post--active" type="submit" value="Запостить">Запостить</button>
-        <button class="editor__post editor__post--inactive" type="reset" value="Отмена">Отмена</button>
+        <button class="editor__post-button editor__post-button--post button" type="submit" value="Запостить">Запостить</button>
+        <button class="editor__post-button editor__post-button--cancel button" type="reset" value="Отмена">Отмена</button>
       </section>
 
     </main>
