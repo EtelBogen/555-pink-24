@@ -1,8 +1,11 @@
-.competition__contacts-data,
-.competition__achieve-fields,
-.competition__emotion-description,
-.competition__buttons {
-  width: 100%;
+.competition-form__fields {
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+
+  &--grey {
+    background-color: @grey-background;
+  }
 }
 
 .competition-form__legend {
@@ -38,23 +41,12 @@
   }
 }
 
-.achievements,
-.applications {
-  background-color: @grey-background;
-}
-
-.competition-form__fields {
-  margin: 0 auto;
-  padding: 0;
-  border: none;
-}
-
 .competition-form__textarea {
   width: 100%;
   box-sizing: border-box;
   min-height: 200px;
   border: 2px solid @grey-borders;
-  font-family: "OpenSans", "Arial", sans-serif;
+  font-family: @font-family-main;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
