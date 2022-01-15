@@ -1,0 +1,34 @@
+.editor__post-button {
+  text-decoration: none;
+
+  &--post {
+    color: @pink;
+    border-color: @pink;
+
+    &:hover {
+      background-color: @pink;
+      cursor: pointer;
+      color: @white;
+    }
+
+    &:active {
+      background-color: @pink;
+      color: fade(@white, 30);
+    }
+  }
+
+  &--cancel {
+    color: fade(@midnight-grey, 10);
+    border-color: fade(@midnight-grey, 10);
+
+    &:hover {
+      cursor: pointer;
+      color: fade(@midnight-grey, 30);
+    }
+
+    &:active {
+      background-color: fade(@midnight-grey, 30);
+      color: fade(@white, 30);
+    }
+  }
+}

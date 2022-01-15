@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -16,16 +17,16 @@
           </button>
           <ul class="main-navigation__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="site-list__href" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Фотографии</a>
+              <a class="site-list__href" href="catalog.html">Фотографии</a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__href">Конкурс</a>
             </li>
             <li class="site-list__item">
-              <a>Конкурс</a>
-            </li>
-            <li class="site-list__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+              <a class="site-list__href" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -53,7 +54,7 @@
             <input class="competition-form__input" id="second-name" type="text" name="second-name" placeholder="Ну и отчество тоже">
           </p>
         </div>
-        <div class="competition-form__fields achievements">
+        <div class="competition-form__fields competition-form__fields--grey achievements">
           <p class="competition-form__legend">Ваши безбашенные достижения в путешествии</p>
           <ul class="competition-form__list">
             <li class="competition-form__item">
@@ -95,7 +96,7 @@
           </p>
         </div>
 
-        <fieldset class="competition-form__fields applications">
+        <fieldset class="competition-form__fields competition-form__fields--grey applications">
           <legend class="competition-form__legend">С каким приложением путешествовали?</legend>
           <ul class="competition-form__list">
             <li class="competition-form__item">
@@ -117,12 +118,14 @@
           <p class="competition-form__legend">Опишите свои эмоции</p>
           <p class="competition-form__field">
             <label class="visually-hidden" for="emotions">Поле для описания своих эмоций.</label>
-            <textarea class="competition-form__input" id="emotions" name="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea class="competition-form__textarea" id="emotions" name="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </p>
         </div>
 
         <button class="competition-form__button button-form" type="submit" value="Отправить форму">Отправить форму</button>
-        <p class="competition-form__footnote">* — обязательные поля</p>
+        <p class="competition-form__footnote">
+          <span>*</span> — обязательные поля
+        </p>
       </form>
     </main>
 

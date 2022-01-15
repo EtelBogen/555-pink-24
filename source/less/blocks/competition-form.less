@@ -1,0 +1,99 @@
+.competition-form__fields {
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+
+  &--grey {
+    background-color: @grey-background;
+  }
+}
+
+.competition-form__legend {
+  font-size: 14px;
+  line-height: 18px;
+  color: @pink;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.competition-form__label {
+  display: block;
+  font-size: 14px;
+  line-height: 30px;
+  color: @pink;
+  text-transform: uppercase;
+}
+
+.competition-form__input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 23px;
+  font-size: 18px;
+  line-height: 30px;
+  border: 2px solid @grey-borders;
+
+  &:hover {
+    border-color: @midnight-grey;
+  }
+
+  &:focus {
+    border-color: @pink;
+  }
+}
+
+.competition-form__textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 200px;
+  border: 2px solid @grey-borders;
+  font-family: @font-family-main;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.competition-form__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.competition-form__checks-label {
+  font-size: 18px;
+  line-height: 30px;
+  color: @midnight-grey;
+}
+
+.competition-form__button {
+  display: block;
+  margin: 0 auto;
+  padding: 14px 44px;
+  border: 3px solid @green-background;
+  background-color: @green-background;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  color: @white;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: @green-background-hover;
+    border-color: @green-background-hover;
+  }
+
+  &:focus {
+    color: fade(@white, 30);
+  }
+}
+
+.competition-form__footnote {
+  font-size: 14px;
+  line-height: 30px;
+  align-items: center;
+  text-transform: uppercase;
+
+  &::first-letter {
+    color: @pink;
+  }
+}

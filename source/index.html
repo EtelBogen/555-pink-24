@@ -3,29 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header page-header--index">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <img class="page-header__logo-image" src="" width="74" height="23" alt="Главная страница сайта приложения Пинк.">
+          <img class="page-header__logo-image" src="img/svg/pink.svg" width="74" height="23" alt="Главная страница сайта приложения Пинк.">
         </a>
         <nav class="page-header__navigation main-navigation">
           <button class="main-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
           <ul class="main-navigation__list site-list">
-            <li class="site-list__item">
-              <a>Главная</a>
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__href">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Фотографии</a>
+              <a class="site-list__href" href="catalog.html">Фотографии</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Конкурс</a>
+              <a class="site-list__href" href="form.html">Конкурс</a>
             </li>
             <li class="site-list__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+              <a class="site-list__href" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -139,15 +141,15 @@
             <tr>
               <th class="pricing-table__header">
                 База
-                <span>1,99 USD</span>
+                <p class="pricing-table__price">1,99 USD</p>
               </th>
               <th class="pricing-table__header pricing-table__header--hit">
                 Стандарт
-                <span>3,99 USD</span>
+                <p class="pricing-table__price">3,99 USD</p>
               </th>
               <th class="pricing-table__header">
                 Анлим
-                <span>9,99 USD</span>
+                <p class="pricing-table__price">9,99 USD</p>
               </th>
             </tr>
             <tr>
@@ -182,7 +184,7 @@
               Звоните:
             </p>
             <p class="contacts-list__text">
-              <a href="tel:+78125556666">+7 (812) 555-66-66</a>
+              <a class="contacts-list__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
             </p>
           </li>
           <li class="contacts-list__item contacts-list__item--email">
@@ -190,7 +192,7 @@
               Пишите:
             </p>
             <p class="contacts-list__text">
-              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <a class="contacts-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </p>
           </li>
           <li class="contacts-list__item contacts-list__item--address">
