@@ -1,3 +1,13 @@
+.information {
+  position: relative;
+  padding-top: 46px;
+}
+
+.information__wrapper {
+  margin: 0 auto;
+  width: 230px;
+}
+
 .information__slogan {
   color: @midnight-grey;
   font-size: 24px;
@@ -5,8 +15,134 @@
   font-weight: 300;
   text-align: center;
   margin: 0;
+  margin-bottom: 29px;
 }
 
-.information__advantages {
-  background-color: @grey-background;
+.information__article {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .information {
+    padding-top: 58px;
+    padding-bottom: 20px;
+  }
+
+  .information__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+  }
+
+  .information__science {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .information__slogan {
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 40px;
+    line-height: 48px;
+
+    &--small {
+      width: 417px;
+      margin: 0 auto;
+    }
+  }
+
+  .information__slogan:last-of-type {
+    margin-bottom: 46px;
+  }
+
+  .information__article {
+    display: block;
+    min-height: 183px;
+    width: 320px;
+    margin: 0 auto;
+    padding-top: 62px;
+    padding-bottom: 109px;
+    padding-left: 17px;
+  }
+
+  .information__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 10px;
+    width: 168px;
+  }
+
+  .information__content {
+    line-height: 24px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+  }
+
+  .information__link {
+    line-height: 24px;
+    color: @pink;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .information {
+    padding-top: 67px;
+    padding-bottom: 67px;
+  }
+
+  .information__science {
+    width: 940px;
+  }
+
+  .information__slogan {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .information__slogan:last-of-type {
+    margin-bottom: 76px;
+  }
+
+  .information__items {
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: auto;
+    background-color: @grey-background;
+  }
+
+  .information__article {
+    width: 574px;
+    padding-top: 96px;
+    padding-bottom: 113px;
+    padding-left: 0;
+  }
+
+  .information__title {
+    font-size: 30px;
+    line-height: 36px;
+    width: auto;
+    margin-bottom: 21px;
+  }
+
+  .information__content {
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 31px;
+    padding-right: 45px;
+    padding-left: 0;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .information__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

@@ -2,9 +2,16 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .site-list__item {
+  padding: 15px 0;
+  border-top: 1px solid @border-shadow;
+  border-bottom: 1px solid @black;
+
   font-size: 18px;
   line-height: 32px;
   font-weight: 700;
@@ -22,5 +29,37 @@
 
   &:active {
     color: fade(@pink, 30);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    flex-direction: row;
+  }
+
+  .site-list__href {
+    padding-bottom: 10px;
+  }
+
+  .site-list__item {
+    padding-left: 42px;
+    padding-right: 42px;
+    border: none;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: none;
+
+
+    &--active {
+      cursor: pointer;
+
+      .site-list__href {
+        border-bottom: 2px solid @white;
+      }
+    }
+  }
+
+  .site-list__href:hover {
+    border-color: @pink;
   }
 }

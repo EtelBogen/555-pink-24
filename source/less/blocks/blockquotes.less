@@ -5,9 +5,20 @@
 
 .blockquotes__author {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 30px;
+}
+
+.blockquotes__name {
+  padding: 0;
+  margin: 0;
+}
+
+.blockquotes__info {
+  margin: 0;
+  padding: 0;
+  display: none;
 }
 
 .blockquotes__text {
@@ -15,5 +26,59 @@
   font-weight: normal;
   line-height: 30px;
   text-align: center;
-  margin: 0;
+  margin: 0 20px;
+  padding: 0;
+  padding-top: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .blockquotes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blockquotes__author {
+    margin-top: 35px;
+    font-size: 20px;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: 700;
+    order: 2;
+  }
+
+  .blockquotes__info {
+    padding-top: 1px;
+    margin-left: -5px;
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    color: @midnight-grey;
+    font-weight: 400;
+    order: 1;
+  }
+
+  .blockquotes__text {
+    margin: 0;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .blockquotes__author {
+    margin-top: 36px;
+    margin-left: -4px;
+    font-size: 24px;
+  }
+
+  .blockquotes__info {
+    font-size: 18px;
+    line-height: 34px;
+  }
+
+  .blockquotes__text {
+    padding: 0;
+    margin-left: -30px;
+  }
 }

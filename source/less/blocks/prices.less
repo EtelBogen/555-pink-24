@@ -1,3 +1,37 @@
 .prices {
+  padding: 0;
+  padding-top: 88px;
+  padding-bottom: 29px;
   background-color: @grey-background;
+}
+
+.prices__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.prices__toggles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 59px;
+  min-height: 12px;
+  margin: 0 auto;
+  padding-top: 38px;
+  padding-bottom: 17px;
+}
+
+@media (min-width: @tablet-width) {
+  .prices {
+    padding-top: 87px;
+    padding-bottom: 70px;
+  }
+
+  .prices__toggles {
+    display: none;
+  }
 }

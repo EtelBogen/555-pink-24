@@ -2,4 +2,36 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  width: 205px;
+  padding-top: 35px;
+  padding-bottom: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.platforms-list__link {
+  display: block;
+  width: 45px;
+  height: 55px;
+  background-repeat: no-repeat;
+
+  &--apple {
+    background-image: url("../img/svg/apple-logo.svg");
+    background-size: 46px 60px;
+    background-position: 0% 80%;
+  }
+
+  &--android {
+    background-image: url("../img/svg/android-logo.svg");
+    background-size: 43px 50px;
+    background-position: 13% 70%;
+  }
+
+  &--windows {
+    background-image: url("../img/svg/microsoft-logo.svg");
+    background-size: 66px 41px;
+    background-position: 50% 70%;
+  }
 }
