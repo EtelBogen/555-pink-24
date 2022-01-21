@@ -3,6 +3,11 @@
   padding-top: 88px;
   padding-bottom: 29px;
   background-color: @grey-background;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 87px;
+    padding-bottom: 70px;
+  }
 }
 
 .prices__wrapper {
@@ -23,15 +28,8 @@
   margin: 0 auto;
   padding-top: 38px;
   padding-bottom: 17px;
-}
 
-@media (min-width: @tablet-width) {
-  .prices {
-    padding-top: 87px;
-    padding-bottom: 70px;
-  }
-
-  .prices__toggles {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }

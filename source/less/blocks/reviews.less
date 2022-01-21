@@ -2,63 +2,45 @@
   padding: 0;
   padding-top: 42px;
   padding-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 37px;
+  }
 }
 
 .reviews__wrapper {
   position: relative;
   min-width: 280px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
 }
 
 .reviews__list {
   margin: 0;
   padding: 0;
   list-style: none;
-}
 
-.reviews__toggles {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 59px;
-  min-height: 12px;
-  margin: 0 auto;
-  padding-top: 33px;
-  padding-bottom: 5px;
-}
-
-.reviews__switch {
-  display: none;
-}
-
-@media (min-width: @tablet-width) {
-  .reviews {
-    padding-top: 0;
-    padding-bottom: 17px;
-  }
-
-  .reviews__wrapper {
-    width: 620px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .reviews {
-    padding-bottom: 37px;
-  }
-
-  .reviews__wrapper {
-    width: 940px;
-  }
-
-  .reviews__list {
+  @media (min-width: @desktop-width) {
     margin: 0 auto;
     padding-top: 118px;
     max-width: 690px;
     position: relative;
+  }
 
-    &::before {
+  &::before {
+    @media (min-width: @desktop-width) {
       content: "";
       position: absolute;
       top: 5px;
@@ -72,12 +54,28 @@
       background-position: top center;
     }
   }
+}
 
-  .reviews__toggles {
+.reviews__toggles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 59px;
+  min-height: 12px;
+  margin: 0 auto;
+  padding-top: 33px;
+  padding-bottom: 5px;
+
+  @media (min-width: @desktop-width) {
     display: none;
   }
+}
 
-  .reviews__switch {
+.reviews__switch {
+  display: none;
+
+  @media (min-width: @desktop-width) {
     display: block;
     position: absolute;
     width: 60px;
@@ -87,26 +85,36 @@
     cursor: pointer;
     background-color: transparent;
     border: none;
+  }
 
-    &--prev {
+  &--prev {
+    @media (min-width: @desktop-width) {
       top: 146px;
       left: -22px;
     }
+  }
 
-    &--next {
+  &--next {
+    @media (min-width: @desktop-width) {
       top: 146px;
       right: -17px;
     }
   }
+}
 
-  .reviews__arrow {
+.reviews__arrow {
+  @media (min-width: @desktop-width) {
     fill: fade(@midnight-grey, 30);
+  }
 
-    &:hover {
+  &:hover {
+    @media (min-width: @desktop-width) {
       fill: fade(@midnight-grey, 60);
     }
+  }
 
-    &:active {
+  &:active {
+    @media (min-width: @desktop-width) {
       fill: fade(@midnight-grey, 10);
     }
   }
