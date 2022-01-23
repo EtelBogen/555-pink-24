@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="source/img/favicons/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="source/img/favicons/180.png">
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="page-header page-header--index">
@@ -175,46 +174,49 @@
       <section class="prices">
         <div class="prices__wrapper slider">
           <h2 class="visually-hidden">Стоимость.</h2>
-            <table class="prices__table pricing-table">
-              <tr>
-                <th class="pricing-table__header pricing-table__header--empty"></th>
-                <th class="pricing-table__header">
+          <input class="slider__switcher slider__switcher--price-1" type="radio" name="price" id="price-radio-1">
+          <input class="slider__switcher slider__switcher--price-2" type="radio" name="price" id="price-radio-2" checked>
+          <input class="slider__switcher slider__switcher--price-3" type="radio" name="price" id="price-radio-3">
+          <table class="prices__table pricing-table">
+            <tr>
+              <th class="pricing-table__header pricing-table__header--empty"></th>
+              <th class="pricing-table__header">
                   База
-                  <p class="pricing-table__price">1,99 USD</p>
-                </th>
-                <th class="pricing-table__header pricing-table__header--hit">
+                <p class="pricing-table__price">1,99 USD</p>
+              </th>
+              <th class="pricing-table__header pricing-table__header--hit">
                   Стандарт
-                  <p class="pricing-table__price">3,99 USD</p>
-                </th>
-                <th class="pricing-table__header">
+                <p class="pricing-table__price">3,99 USD</p>
+              </th>
+              <th class="pricing-table__header">
                   Анлим
-                  <p class="pricing-table__price">9,99 USD</p>
-                </th>
-              </tr>
-              <tr>
-                <td class="pricing-table__field pricing-table__field--empty"><span>Розовый фильтр</span></td>
-                <td class="pricing-table__field pricing-table__field--ok"><span class="pricing-table__field--blank">Розовый фильтр</span><span class="visually-hidden">Включено в тариф.</span></td>
-                <td class="pricing-table__field pricing-table__field--ok"><span class="pricing-table__field--blank">Розовый фильтр</span><span class="visually-hidden">Включено в тариф.</span></td>
-                <td class="pricing-table__field pricing-table__field--ok"><span class="pricing-table__field--blank">Розовый фильтр</span><span class="visually-hidden">Включено в тариф.</span></td>
-              </tr>
-              <tr>
-                <td class="pricing-table__field pricing-table__field--empty"><span>Смайлики</span></td>
-                <td class="pricing-table__field pricing-table__field--no"><span class="pricing-table__field--blank">Смайлики</span><span class="visually-hidden">Не включено в тариф.</span></td>
-                <td class="pricing-table__field pricing-table__field--ok"><span class="pricing-table__field--blank">Смайлики</span><span class="visually-hidden">Включено в тариф.</span></td>
-                <td class="pricing-table__field pricing-table__field--ok"><span class="pricing-table__field--blank">Смайлики</span><span class="visually-hidden">Включено в тариф.</span></td>
-              </tr>
-              <tr>
-                <td class="pricing-table__field pricing-table__field--empty"><span>Комментарии</span></td>
-                <td class="pricing-table__field pricing-table__field--no"><span class="pricing-table__field--blank">Комментарии</span><span class="visually-hidden">Не включено в тариф.</span></td>
-                <td class="pricing-table__field pricing-table__field--no"><span class="pricing-table__field--blank">Комментарии</span><span class="visually-hidden">Не включено в тариф.</span></td>
-                <td class="pricing-table__field pricing-table__field--ok"><span class="pricing-table__field--blank">Комментарии</span><span class="visually-hidden">Включено в тариф.</span></td>
-              </tr>
-            </table>
-            <div class="prices__toggles slider-toggles">
-              <button class="slider-toggles__item" type="button" aria-label="Базовый тариф"></button>
-              <button class="slider-toggles__item slider-toggles__item--active" type="button" aria-label="Стандартный тариф" aria-current="true"></button>
-              <button class="slider-toggles__item" type="button" aria-label="Безлимитный тариф"></button>
-            </div>
+                <p class="pricing-table__price">9,99 USD</p>
+              </th>
+            </tr>
+            <tr>
+              <td class="pricing-table__field pricing-table__field--empty"><span>Розовый фильтр</span></td>
+              <td class="pricing-table__field pricing-table__field--ok"><span class="pricing-table__field--blank">Розовый фильтр</span><span class="visually-hidden">Включено в тариф.</span></td>
+              <td class="pricing-table__field pricing-table__field--ok"><span class="pricing-table__field--blank">Розовый фильтр</span><span class="visually-hidden">Включено в тариф.</span></td>
+              <td class="pricing-table__field pricing-table__field--ok"><span class="pricing-table__field--blank">Розовый фильтр</span><span class="visually-hidden">Включено в тариф.</span></td>
+            </tr>
+            <tr>
+              <td class="pricing-table__field pricing-table__field--empty"><span>Смайлики</span></td>
+              <td class="pricing-table__field pricing-table__field--no"><span class="pricing-table__field--blank">Смайлики</span><span class="visually-hidden">Не включено в тариф.</span></td>
+              <td class="pricing-table__field pricing-table__field--ok"><span class="pricing-table__field--blank">Смайлики</span><span class="visually-hidden">Включено в тариф.</span></td>
+              <td class="pricing-table__field pricing-table__field--ok"><span class="pricing-table__field--blank">Смайлики</span><span class="visually-hidden">Включено в тариф.</span></td>
+            </tr>
+            <tr>
+              <td class="pricing-table__field pricing-table__field--empty"><span>Комментарии</span></td>
+              <td class="pricing-table__field pricing-table__field--no"><span class="pricing-table__field--blank">Комментарии</span><span class="visually-hidden">Не включено в тариф.</span></td>
+              <td class="pricing-table__field pricing-table__field--no"><span class="pricing-table__field--blank">Комментарии</span><span class="visually-hidden">Не включено в тариф.</span></td>
+              <td class="pricing-table__field pricing-table__field--ok"><span class="pricing-table__field--blank">Комментарии</span><span class="visually-hidden">Включено в тариф.</span></td>
+            </tr>
+          </table>
+          <div class="prices__toggles slider__toggles">
+            <label class="slider__toggle" for="price-radio-1"></label>
+            <label class="slider__toggle" for="price-radio-2"></label>
+            <label class="slider__toggle" for="price-radio-3"></label>
+          </div>
         </div>
       </section>
 
@@ -247,7 +249,9 @@
             </p>
           </li>
         </ul>
-          <!-- Тут будет карта -->
+        <div class="contacts__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59894241241!2d30.320894616231268!3d59.93879686904772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1518863344682"></iframe>
+        </div>
       </section>
     </main>
 
