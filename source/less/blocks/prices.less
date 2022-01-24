@@ -3,6 +3,10 @@
   padding-top: 88px;
   padding-bottom: 29px;
   background-color: @grey-background;
+  background-image: url("/img/svg/bg-triangle-white-main.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 50% 0;
 
   @media (min-width: @tablet-width) {
     padding-top: 87px;
@@ -16,17 +20,19 @@
   align-items: center;
   overflow: hidden;
   padding: 0 20px;
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    padding: 0;
+    margin: 0 auto;
+  }
 }
 
 .prices__table {
-  min-width: 300%;
+  min-width: 263%;
 
   @media (min-width: @tablet-width) {
     min-width: 100%;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-width: 940px;
   }
 }
 
