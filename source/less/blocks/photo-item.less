@@ -3,9 +3,23 @@
   color: @midnight-grey;
 }
 
+.photo-item__description {
+  background-color: @grey-background;
+  padding: 26px 17px;
+
+  @media (min-width: @tablet-width) {
+    height: 95px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+}
+
 .photo-item__author {
   font-weight: 700;
   font-size: 14px;
+  margin: 0;
 }
 
 .photo-item__timestamp {
@@ -17,12 +31,38 @@
 .photo-item__text {
   font-weight: 400;
   font-size: 14px;
+  margin: 0;
 }
 
 .photo-item__likes {
+  position: relative;
   font-weight: 400;
   font-size: 12px;
   line-height: 24px;
+  text-align: left;
   text-transform: uppercase;
   color: @pink;
+  border: none;
+  padding-left: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+    padding: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 3px;
+    width: 13px;
+    height: 12px;
+    background-image: url("/img/svg/icon-heart.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      left: auto;
+      right: 0;
+    }
+  }
 }
