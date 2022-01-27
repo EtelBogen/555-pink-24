@@ -11,8 +11,16 @@
   width: 100%;
   height: 180px;
 
+  @media (min-width: @tablet-width) {
+    height: auto;
+  }
+
   &--top {
     height: 137px;
+
+    @media (min-width: @tablet-width) {
+      height: auto;
+    }
   }
 }
 
@@ -23,8 +31,16 @@
   object-position: 50% 50%;
   object-fit: cover;
 
+  @media (min-width: @tablet-width) {
+    height: auto;
+  }
+
   &--top {
     height: 137px;
+
+    @media (min-width: @tablet-width) {
+      height: auto;
+    }
   }
 }
 
