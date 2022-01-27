@@ -1,11 +1,94 @@
+.competition-form {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 960px;
+    padding-top: 48px;
+    margin: 0 auto;
+  }
+}
+
 .competition-form__fields {
   margin: 0 auto;
   padding: 0;
   border: none;
 
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0 20px 50px;
+  }
+
   &--grey {
     background-color: @grey-background;
+
+    @media (min-width: @tablet-width) {
+      background-color: transparent;
+    }
   }
+
+  &--personal-data {
+    @media (min-width: @tablet-width) {
+      order: 1;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 470px;
+      padding-right: 25px;
+    }
+  }
+
+  &--achievements {
+    @media (min-width: @tablet-width) {
+      order: 4;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+      padding-top: 31px;
+    }
+  }
+
+  &--contacts-data {
+    @media (min-width: @tablet-width) {
+      order: 3;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+    }
+  }
+
+  &--applications {
+    @media (min-width: @tablet-width) {
+      order: 2;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 434px;
+      padding: 0;
+      margin-left: 10px;
+    }
+  }
+
+  &--competition-data {
+    @media (min-width: @tablet-width) {
+      order: 5;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+    }
+  }
+}
+
+.competition-form__fields-wrapper {
+  border: 2px solid @grey-background;
 }
 
 .competition-form__field {
@@ -77,6 +160,15 @@
   margin: 0;
   padding: 0 20px;
   list-style: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    margin-left: 57px;
+    margin-right: 0;
+    margin-bottom: 6px;
+  }
 }
 
 .competition-form__item {
@@ -100,6 +192,23 @@
 
 .competition-form__button-wrapper {
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    order: 6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
+}
+
+.competition-form__button {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .competition-form__footnote {
