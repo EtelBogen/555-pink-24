@@ -1,7 +1,4 @@
 .advantages-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 80px;
   padding-left: 20px;
   padding-right: 20px;
@@ -11,11 +8,6 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: 50% 0;
-
-  @media (min-width: @tablet-width) {
-    flex-direction: row;
-    justify-content: center;
-  }
 
   @media (min-width: @desktop-width) {
     padding: 0;
@@ -29,10 +21,10 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    order: 2;
-    padding-top: 67px;
-    width: 100%;
+    width: 50%;
     min-height: 411px;
+    margin-left: auto;
+    margin-right: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -45,6 +37,21 @@
     margin: 0 auto;
     padding-bottom: 30px;
     padding-top: 357px;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      content: "";
+      width: 268px;
+      height: 481px;
+      right: 110%;
+      bottom: 0;
+      background-image: url("/img/png/iphone-screen-3-tablet@1x.png");
+      background-repeat: no-repeat;
+      background-size: 268px auto;
+      display: block;
+    }
   }
 }
 
@@ -62,9 +69,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-left: 300px;
     padding-top: 8px;
-    padding-left: 10px;
     text-align: left;
     min-width: 310px;
 
@@ -75,6 +80,7 @@
     &--third {
       padding-top: 5px;
       padding-bottom: 45px;
+      background-image: none;
     }
   }
 

@@ -3,6 +3,15 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 623px;
+    margin-right: 50%;
+    margin-left: auto;
+  }
 }
 
 .downloads__wrapper {
@@ -13,6 +22,10 @@
   width: 100%;
   background-color: @dark-grey;
   height: 271px;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+  }
 }
 
 .downloads__link {
@@ -39,4 +52,9 @@
   text-align: center;
   margin: 0;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    padding: 0;
+  }
 }
