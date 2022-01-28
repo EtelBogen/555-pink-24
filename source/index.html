@@ -12,7 +12,7 @@
   </head>
   <body class="page__body">
     <header class="page-header page-header--index">
-      <nav class="page-header__navigation main-navigation main-navigation--closed">
+      <nav class="page-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
         <div class="main-navigation__wrapper">
           <div class="main-navigation__logo-wrapper">
             <a class="main-navigation__logo">
@@ -48,25 +48,29 @@
         </div>
       </nav>
 
-      <h1 class="visually-hidden">Приложение PINK.</h1>
-      <div class="page-header__wrapper page-header__wrapper--index downloads">
-        <p class="page-header__header page-header__header--index downloads__header">Взгляните на жизнь иначе!</p>
-        <h2 class="visually-hidden">Скачать приложение.</h2>
-        <a class="downloads__link button" href="#">Скачать приложение</a>
-        <ul class="downloads__platforms platforms-list">
-          <li class="platforms-list__item">
-            <a class="platforms-list__link platforms-list__link--apple" href="https://www.apple.com/ru/app-store/" target="_blank"><span class="visually-hidden">Скачать для Apple.</span></a>
-          </li>
-          <li class="platforms-list__item">
-            <a class="platforms-list__link platforms-list__link--android" href="https://play.google.com/store/apps;hl=ru" target="_blank"><span class="visually-hidden">Скачать для Android.</span></a>
-          </li>
-          <li class="platforms-list__item">
-            <a class="platforms-list__link platforms-list__link--windows" href="https://www.microsoft.com/ru-RU/store/apps" target="_blank"><span class="visually-hidden">Скачать для Windows.</span></a>
-          </li>
-        </ul>
-        <p class="downloads__description">
-            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-        </p>
+      <div class="page-header__intro page-header__intro--index">
+        <h1 class="visually-hidden">Приложение PINK.</h1>
+          <div class="page-header__downloads downloads">
+            <p class="page-header__header page-header__header--index">Взгляните на жизнь иначе!</p>
+            <div class="downloads__wrapper">
+              <h2 class="visually-hidden">Скачать приложение.</h2>
+              <a class="downloads__link button" href="#">Скачать приложение</a>
+              <ul class="downloads__platforms platforms-list">
+                <li class="platforms-list__item">
+                  <a class="platforms-list__link platforms-list__link--apple" href="https://www.apple.com/ru/app-store/" target="_blank"><span class="visually-hidden">Скачать для Apple.</span></a>
+                </li>
+                <li class="platforms-list__item">
+                  <a class="platforms-list__link platforms-list__link--android" href="https://play.google.com/store/apps;hl=ru" target="_blank"><span class="visually-hidden">Скачать для Android.</span></a>
+                </li>
+                <li class="platforms-list__item">
+                  <a class="platforms-list__link platforms-list__link--windows" href="https://www.microsoft.com/ru-RU/store/apps" target="_blank"><span class="visually-hidden">Скачать для Windows.</span></a>
+                </li>
+              </ul>
+              <p class="downloads__description">
+                  Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+              </p>
+                        </div>
+            </div>
       </div>
 
     </header>
@@ -80,7 +84,7 @@
             Устали от серости мегаполиса?
           </p>
           <p class="information__slogan">
-            Нам есть, что вам<br>предложить!
+            Нам есть, что вам предложить!
           </p>
         </div>
         <div class="information__items">
@@ -129,6 +133,9 @@
       <section class="reviews">
         <div class="reviews__wrapper slider">
           <h2 class="visually-hidden">Отзывы.</h2>
+          <input class="slider__switcher slider__switcher--rewiew-1" type="radio" name="rewiew" id="rewiew-radio-1" checked="">
+          <input class="slider__switcher slider__switcher--rewiew-2" type="radio" name="rewiew" id="rewiew-radio-2">
+          <input class="slider__switcher slider__switcher--rewiew-3" type="radio" name="rewiew" id="rewiew-radio-3">
           <ul class="reviews__list reviews-list">
             <li class="reviews-list__item reviews-list__item--current">
               <blockquote class="blockquotes">
@@ -164,10 +171,10 @@
               </blockquote>
             </li>
           </ul>
-          <div class="reviews__toggles slider-toggles">
-            <button class="slider-toggles__item slider-toggles__item--active" type="button" aria-label="Первый отзыв" aria-current="true"></button>
-            <button class="slider-toggles__item" type="button" aria-label="Второй отзыв"></button>
-            <button class="slider-toggles__item" type="button" aria-label="Третий отзыв"></button>
+          <div class="reviews__toggles slider__toggles">
+            <label class="slider__toggle" for="rewiew-radio-1"></label>
+            <label class="slider__toggle" for="rewiew-radio-2"></label>
+            <label class="slider__toggle" for="rewiew-radio-3"></label>
           </div>
           <button class="reviews__switch reviews__switch--prev" type="button">
             <svg class="reviews__arrow" width="22" height="41">
@@ -187,7 +194,7 @@
         <div class="prices__wrapper slider">
           <h2 class="visually-hidden">Стоимость.</h2>
           <input class="slider__switcher slider__switcher--price-1" type="radio" name="price" id="price-radio-1">
-          <input class="slider__switcher slider__switcher--price-2" type="radio" name="price" id="price-radio-2" checked>
+          <input class="slider__switcher slider__switcher--price-2" type="radio" name="price" id="price-radio-2" checked="">
           <input class="slider__switcher slider__switcher--price-3" type="radio" name="price" id="price-radio-3">
           <table class="prices__table pricing-table">
             <tr>
