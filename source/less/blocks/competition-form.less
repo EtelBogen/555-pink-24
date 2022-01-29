@@ -93,6 +93,17 @@
 
 .competition-form__field {
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 50px;
+    margin-top: 53px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .competition-form__legend {
@@ -102,6 +113,15 @@
   text-align: center;
   text-transform: uppercase;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 23px;
+    padding-left: 25px;
+    padding-right: 36px;
+    max-width: 460px;
+    min-width: 300px;
+    margin-left: calc(50% - 130px);
+  }
 }
 
 .competition-form__label {
@@ -110,6 +130,11 @@
   line-height: 30px;
   color: @pink;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-right: 25px;
+  }
 }
 
 .competition-form__input {

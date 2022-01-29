@@ -3,14 +3,11 @@
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: row;
-    width: 620px;
-    margin: 0 auto;
-    padding-top: 34px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 13px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    grid-template-rows: repeat(1, 1fr);
+    row-gap: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -23,6 +20,10 @@
   height: 374px;
   object-position: 50% 50%;
   object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
 }
 
 .editor__buttons {
@@ -40,10 +41,6 @@
 .editor__button {
   width: 100%;
   margin-bottom: 12px;
-
-  @media (min-width: @tablet-width) {
-    width: 260px;
-  }
 
   @media (min-width: @desktop-width) {
     width: 183px;
