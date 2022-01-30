@@ -5,13 +5,15 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
+    column-gap: 10px;
     grid-template-rows: repeat(1, 1fr);
     row-gap: 20px;
   }
 
   @media (min-width: @desktop-width) {
     width: 940px;
+    margin: 0 auto;
+    justify-items: center;
   }
 }
 
@@ -26,6 +28,17 @@
   }
 }
 
+.editor__instruments {
+  @media (min-width: @tablet-width) {
+    padding-left: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    width: 100%;
+  }
+}
+
 .editor__buttons {
   display: flex;
   flex-direction: column;
@@ -34,7 +47,7 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
-    margin-left: 58px;
+    justify-content: space-between;
   }
 }
 
