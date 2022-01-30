@@ -13,10 +13,6 @@
   }
 
   &--closed {
-    background-color: transparent;
-  }
-
-  &--closed .main-navigation__logo-wrapper {
     background-color: fade(@black, 30);
   }
 
@@ -38,6 +34,13 @@
 }
 
 .main-navigation__wrapper {
+  min-height: 65px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 110px;
+  }
+
+
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
@@ -124,10 +127,9 @@
   z-index: 2;
 
   @media (min-width: @desktop-width) {
-    max-width: 720px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-left: 26px;
+    width: 720px;
+    background-color: transparent;
+    z-index: 0;
+    position: inherit;
   }
 }
