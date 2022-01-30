@@ -8,11 +8,15 @@
   min-height: 667px;
 
   @media (min-width: @tablet-width) {
-    width: 300px;
+    width: 50%;
+    height: 623px;
     min-height: 623px;
-    margin-right: 50%;
-    margin-left: auto;
+    margin-right: auto;
   }
+}
+
+.downloads__platforms-wrapper {
+  width: 100%;
 }
 
 .downloads__wrapper {
@@ -20,12 +24,12 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  background-color: @dark-grey;
   height: 271px;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    background-color: transparent;
+    padding-right: 10px;
+    padding-left: 0;
   }
 }
 
@@ -33,6 +37,9 @@
   color: @white;
   text-decoration: none;
   border-color: @white;
+  text-align: center;
+  width: 100%;
+  padding: 15px 0;
 
   &:hover {
     background-color: @white;
@@ -44,6 +51,10 @@
     background-color: @white;
     color: fade(@pink, 30);
   }
+}
+
+.downloads__link-text {
+  padding: 0 35px;
 }
 
 .downloads__description {

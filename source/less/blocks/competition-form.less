@@ -103,6 +103,25 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+
+    &--contacts-data {
+      flex-direction: column;
+      position: relative;
+      margin-top: 0;
+      margin-bottom: 24px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        right: 60px;
+        width: 62px;
+        height: 58px;
+        background-color: @grey-borders;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
   }
 }
 
@@ -113,14 +132,24 @@
   text-align: center;
   text-transform: uppercase;
   padding: 0 20px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     padding-top: 23px;
+    padding-bottom: 20px;
     padding-left: 25px;
     padding-right: 36px;
     max-width: 460px;
     min-width: 300px;
     margin-left: calc(50% - 130px);
+  }
+
+  &--hidden {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
   }
 }
 
@@ -134,6 +163,12 @@
   @media (min-width: @tablet-width) {
     padding-left: 0;
     padding-right: 25px;
+
+    &--contacts-data {
+      order: 2;
+      padding-left: 77px;
+      padding-top: 11px;
+    }
   }
 }
 
