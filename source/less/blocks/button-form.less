@@ -1,3 +1,27 @@
 .button-form {
-  visibility: visible;
+  display: block;
+  min-width: 276px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 14px 44px;
+  border: 3px solid @green-background;
+  background-color: @green-background;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  color: @white;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 296px;
+  }
+
+  &:hover {
+    background-color: @green-background-hover;
+    border-color: @green-background-hover;
+  }
+
+  &:focus {
+    color: fade(@white, 30);
+  }
 }

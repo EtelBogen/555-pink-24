@@ -3,4 +3,21 @@
   line-height: 30px;
   color: @midnight-grey;
   text-align: center;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  &--mobile-hidden {
+    @media (max-width: @mobile-width-only) {
+      display: none;
+    }
+  }
 }

@@ -2,4 +2,23 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.photos-list__item {
+  position: relative;
+  width: 100%;
+  height: auto;
 }

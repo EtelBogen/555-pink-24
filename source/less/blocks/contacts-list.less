@@ -2,10 +2,58 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    padding-top: 57px;
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
 }
 
 .contacts-list__item {
   text-align: center;
+  padding-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    &--phone,
+    &--email {
+      min-width: 50%;
+      padding-bottom: 56px;
+    }
+
+    &--address {
+      min-width: 100%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--phone,
+    &--email,
+    &--address {
+      min-width: 33.3%;
+    }
+
+    &--phone {
+      order: 1;
+    }
+
+    &--email {
+      order: 3;
+    }
+
+    &--address {
+      order: 2;
+      margin: 0;
+    }
+  }
 }
 
 .contacts-list__title {
