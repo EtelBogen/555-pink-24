@@ -122,6 +122,10 @@
       margin-bottom: 24px;
     }
 
+    @media (min-width: @desktop-width) {
+      width: 371px;
+    }
+
     &::after {
       @media (min-width: @tablet-width) {
         content: "";
@@ -167,6 +171,16 @@
 
     @media (min-width: @tablet-width) {
       display: block;
+    }
+  }
+}
+
+.competition-form__wrapper {
+  &--contacts {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
     }
   }
 }

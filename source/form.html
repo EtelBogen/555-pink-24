@@ -53,7 +53,7 @@
 
     <main class="page-main">
       <p class="visually-hidden">Форма регистрации участников конкурса.</p>
-      <p class="page-main__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+      <p class="page-main__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="page-main__description--mobile-hidden">Пожалуйста, заполните форму ниже:</span></p>
       <form class="competition-form" name="competition-form" method="post" action="https://echo.htmlacademy.ru">
         <div class="competition-form__fields competition-form__fields--personal-data">
           <p class="visually-hidden">Личные данные.</p>
@@ -105,14 +105,16 @@
         <div class="competition-form__fields competition-form__fields--contacts-data">
           <div class="competition-form__fields-wrapper">
             <p class="competition-form__legend competition-form__legend--hidden">Контактные данные</p>
-            <p class="competition-form__field competition-form__field--contacts-data competition-form__field--phone">
-              <label class="competition-form__label competition-form__label--contacts-data" for="phone">Номер телефона</label>
-              <input class="competition-form__input" id="phone" type="tel" name="phone" placeholder="Номер, пожалуйста">
-            </p>
-            <p class="competition-form__field competition-form__field--contacts-data competition-form__field--email">
-              <label class="competition-form__label competition-form__label--contacts-data" for="email">Адрес почты</label>
-              <input class="competition-form__input" id="email" type="email" name="email" placeholder="Введите почту *">
-            </p>
+            <div class="competition-form__wrapper--contacts">
+              <p class="competition-form__field competition-form__field--contacts-data competition-form__field--phone">
+                <label class="competition-form__label competition-form__label--contacts-data" for="phone">Номер телефона</label>
+                <input class="competition-form__input" id="phone" type="tel" name="phone" placeholder="Номер, пожалуйста">
+              </p>
+              <p class="competition-form__field competition-form__field--contacts-data competition-form__field--email">
+                <label class="competition-form__label competition-form__label--contacts-data" for="email">Адрес почты</label>
+                <input class="competition-form__input" id="email" type="email" name="email" placeholder="Введите почту *">
+              </p>
+            </div>
           </div>
         </div>
 
