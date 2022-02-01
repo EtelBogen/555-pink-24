@@ -1,5 +1,30 @@
-.copyrights__text {
+.copyrights {
+  position: relative;
   font-size: 14px;
   line-height: 18px;
   color: @midnight-grey;
+}
+
+.copyrights__link {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  width: 27px;
+  height: 34px;
+
+  @media (min-width: @tablet-width) {
+    top: 41px;
+  }
+}
+
+.copyrights__htmlacademy {
+  fill: @pink;
+
+  &:hover {
+    fill: @midnight-grey;
+  }
+
+  &:active {
+    fill: fade(@midnight-grey, 30);
+  }
 }

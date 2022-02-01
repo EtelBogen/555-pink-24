@@ -1,18 +1,18 @@
 .contacts-list {
   margin: 0;
-  padding: 0;
+  padding: 0 20px 16px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 42px;
+    padding: 0 9px 6px;
   }
 
   @media (min-width: @desktop-width) {
     width: 940px;
-    padding-top: 57px;
+    padding: 40px 0 0;
     align-items: baseline;
     flex-wrap: nowrap;
   }
@@ -20,36 +20,41 @@
 
 .contacts-list__item {
   text-align: center;
-  padding-bottom: 23px;
+  padding-bottom: 19px;
 
-  @media (min-width: @tablet-width) {
-    &--phone,
-    &--email {
+  &--phone {
+    @media (min-width: @tablet-width) {
       min-width: 50%;
-      padding-bottom: 56px;
+      padding-bottom: 42px;
     }
 
-    &--address {
-      min-width: 100%;
+    @media (min-width: @desktop-width) {
+      min-width: 32%;
+      order: 1;
     }
   }
 
-  @media (min-width: @desktop-width) {
-    &--phone,
-    &--email,
-    &--address {
-      min-width: 33.3%;
+  &--email {
+    padding-bottom: 23px;
+
+    @media (min-width: @tablet-width) {
+      min-width: 50%;
+      padding-bottom: 42px;
     }
 
-    &--phone {
-      order: 1;
-    }
-
-    &--email {
+    @media (min-width: @desktop-width) {
+      min-width: 32%;
       order: 3;
     }
+  }
 
-    &--address {
+  &--address {
+    @media (min-width: @tablet-width) {
+      min-width: 100%;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-width: 36%;
       order: 2;
       margin: 0;
     }
@@ -62,6 +67,14 @@
   line-height: 24px;
   color: @midnight-grey;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 21px;
+  }
 }
 
 .contacts-list__text {
@@ -70,6 +83,12 @@
   font-weight: 300;
   color: @pink;
   margin: 0;
+
+  &--address {
+    line-height: 33px;
+    max-width: 298px;
+    margin: 0 auto;
+  }
 }
 
 .contacts-list__link {

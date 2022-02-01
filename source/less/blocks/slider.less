@@ -7,7 +7,6 @@
   margin-right: 3px;
   padding: 0;
   display: inline-block;
-  vertical-align: middle;
   width: 6px;
   height: 6px;
   background-color: fade(@midnight-grey, 30);
@@ -21,12 +20,18 @@
   &:focus {
     background-color: fade(@midnight-grey, 10);
   }
+
+  &--checked {
+    background-color: @white;
+    border: 3px solid @midnight-grey;
+  }
 }
 
 @media (max-width: @mobile-width-only) {
   .slider__switcher--price-1:checked ~ .slider__toggles label[for="price-radio-1"],
   .slider__switcher--price-2:checked ~ .slider__toggles label[for="price-radio-2"],
-  .slider__switcher--price-3:checked ~ .slider__toggles label[for="price-radio-3"] {
+  .slider__switcher--price-3:checked ~ .slider__toggles label[for="price-radio-3"],
+  .slider__switcher--rewiew-1:checked ~ .slider__toggles label[for="rewiew-radio-1"] {
     background-color: @white;
     border: 3px solid @midnight-grey;
   }
