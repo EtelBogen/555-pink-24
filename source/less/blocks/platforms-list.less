@@ -2,19 +2,26 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  padding-top: 35px;
-  padding-bottom: 21px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 31px;
+  padding-bottom: 19px;
+  padding-left: 18px;
+  padding-right: 17px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 44px;
+    padding-bottom: 0;
+    padding-left: 25px;
+    padding-right: 28px;
+  }
 }
 
 .platforms-list__link {
   display: block;
   width: 45px;
-  height: 55px;
+  height: 58px;
   background-repeat: no-repeat;
 
   &--apple {
@@ -26,12 +33,12 @@
   &--android {
     background-image: url("/img/svg/logo-android.svg");
     background-size: 43px 50px;
-    background-position: 13% 70%;
+    background-position: 80% 60%;
   }
 
   &--windows {
     background-image: url("/img/svg/logo-microsoft.svg");
-    background-size: 66px 41px;
+    background-size: 65px 41px;
     background-position: 50% 70%;
   }
 }

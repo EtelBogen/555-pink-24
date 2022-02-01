@@ -5,4 +5,51 @@
   list-style: none;
   display: flex;
   flex-direction: row;
+
+  @media (min-width: @tablet-width) {
+    min-width: 205px;
+  }
+}
+
+.socials-list__href {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin: -3px 5px;
+  width: 47px;
+  height: 47px;
+  font-size: 0;
+  line-height: 0;
+  background-color: @white;
+  border: 3px solid fade(@midnight-grey, 10);
+  border-radius: 50%;
+
+  &:hover {
+    border-color: @midnight-grey;
+  }
+
+  &:active {
+    border-color: #e9ebec;
+  }
+
+  &:active .page-footer__social-logo {
+    fill: fade(@pink, 30);
+  }
+}
+
+.socials-list__icon {
+  margin: auto;
+  fill: @pink;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+
+  &--facebook {
+    top: 14px;
+    left: 19px;
+  }
+
+  &--youtube {
+    left: 17px;
+  }
 }

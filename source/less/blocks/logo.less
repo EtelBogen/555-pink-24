@@ -1,0 +1,73 @@
+.logo {
+  @media (min-width: @tablet-width) {
+    margin-top: 28px;
+  }
+}
+
+.logo__header {
+  fill: @white;
+
+  &--mobile {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  &--desktop:hover,
+  &--mobile:hover,
+  &--tablet:hover {
+    fill: @pink;
+  }
+
+  &--desktop:active,
+  &--mobile:active,
+  &--tablet:active {
+    fill: fade(@white, 30);
+  }
+}
+
+.logo__footer {
+  &--mobile {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  &--mobile:hover,
+  &--desktop:hover {
+    fill: @pink;
+  }
+
+  &--mobile:active,
+  &--desktop:active {
+    fill: fade(@midnight-grey, 30);
+  }
+}
