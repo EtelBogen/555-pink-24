@@ -36,6 +36,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
+    height: 268px;
   }
 }
 
@@ -44,6 +45,10 @@
 
   @media (min-width: @tablet-width) {
     min-height: 133px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 175px;
   }
 }
 
@@ -65,10 +70,19 @@
     background-color: @white;
     color: fade(@pink, 30);
   }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
 }
 
 .downloads__link-text {
   padding: 0 35px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+    padding: 0 28px;
+  }
 }
 
 .downloads__description {
@@ -83,5 +97,9 @@
     font-size: 18px;
     padding: 0;
     padding-bottom: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }

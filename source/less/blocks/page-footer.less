@@ -22,6 +22,16 @@
     margin: 0 auto;
     padding: 0 19px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 37px 0;
+  }
+}
+
+.page-footer__logo {
+  @media (min-width: @desktop-width) {
+    margin-top: 14px;
+  }
 }
 
 .page-footer__copyrights {
@@ -30,4 +40,10 @@
   font-size: 14px;
   line-height: 18px;
   color: @midnight-grey;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    padding-top: 31px;
+    padding-right: 40px;
+  }
 }

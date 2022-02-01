@@ -10,6 +10,10 @@
     padding-bottom: 67px;
   }
 
+  @media (min-width: @desktop-width) {
+    padding-bottom: 97px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -21,6 +25,10 @@
 
     @media (min-width: @tablet-width) {
       height: 41px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 102px;
     }
   }
 }
@@ -38,8 +46,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 940px;
-    padding: 0;
+    width: 943px;
+    padding: 0 17px;
     margin: 0 auto;
   }
 }
