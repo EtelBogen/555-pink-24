@@ -19,6 +19,7 @@
 .competition-form__fields {
   margin: 0 auto;
   padding: 0;
+  padding-bottom: 25px;
   border: none;
 
   @media (min-width: @tablet-width) {
@@ -46,6 +47,8 @@
   }
 
   &--achievements {
+    padding-bottom: 0;
+
     @media (min-width: @tablet-width) {
       order: 4;
     }
@@ -67,6 +70,8 @@
   }
 
   &--applications {
+    padding-bottom: 0;
+
     @media (min-width: @tablet-width) {
       order: 2;
     }
@@ -78,7 +83,9 @@
     }
   }
 
-  &--competition-data {
+  &--emotions {
+    padding-bottom: 29px;
+
     @media (min-width: @tablet-width) {
       order: 5;
     }
@@ -90,11 +97,14 @@
 }
 
 .competition-form__fields-wrapper {
-  border: 2px solid @grey-background;
+  @media (min-width: @tablet-width) {
+    border: 2px solid @grey-background;
+  }
 }
 
 .competition-form__field {
-  padding: 0 20px;
+  padding: 0 20px 17px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -148,8 +158,17 @@
   color: @pink;
   text-align: center;
   text-transform: uppercase;
-  padding: 0 20px;
+  padding: 39px 20px 42px;
   margin: 0;
+
+  &--applications {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &--emotions {
+    padding-bottom: 14px;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 23px;
@@ -173,10 +192,16 @@
       display: block;
     }
   }
+
+  &--min {
+    margin: 0 14px;
+  }
 }
 
 .competition-form__wrapper {
   &--contacts {
+    padding-top: 31px;
+
     @media (min-width: @desktop-width) {
       display: flex;
       flex-direction: row;
@@ -191,6 +216,8 @@
   line-height: 30px;
   color: @pink;
   text-transform: uppercase;
+  padding-bottom: 6px;
+  padding-left: 23px;
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
@@ -207,7 +234,7 @@
 .competition-form__input {
   box-sizing: border-box;
   width: 100%;
-  padding: 20px 23px;
+  padding: 14px 23px;
   font-size: 18px;
   line-height: 30px;
   border: 2px solid @grey-borders;
@@ -227,14 +254,14 @@
 .competition-form__textarea {
   width: 100%;
   box-sizing: border-box;
-  min-height: 200px;
+  min-height: 201px;
   border: 2px solid @grey-borders;
   font-family: @font-family-main;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  padding: 20px 23px;
+  padding: 13px 21px;
 
   &:hover {
     border-color: @midnight-grey;
@@ -264,26 +291,107 @@
 }
 
 .competition-form__item {
-  padding-bottom: 30px;
+  padding-bottom: 52px;
+
+  &--applications {
+    padding-bottom: 44px;
+  }
+
+  &:last-of-type {
+    padding-bottom: 47px;
+  }
 }
 
-.competition-form__checkbox,
-.competition-form__radio {
+.competition-form__checkbox {
   display: none;
+
+  & + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -4px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid @grey-borders;
+    background-color: @white;
+  }
+
+  &:hover + label::before {
+    border-color: @midnight-grey;
+  }
+
+  &:active + label::before {
+    border-color: @pink;
+  }
 }
 
 .competition-form__checks-label {
   position: relative;
   display: block;
   cursor: pointer;
-  padding-left: 68px;
+  padding-left: 59px;
   font-size: 18px;
   line-height: 30px;
   color: @midnight-grey;
+
+  &--applications {
+    padding-left: 70px;
+  }
+}
+
+.competition-form__icon-yes {
+  fill: @pink;
+}
+
+.competition-form__checkbox + .competition-form__checks-label .competition-form__icon-yes {
+  display: none;
+}
+
+.competition-form__checkbox:checked + .competition-form__checks-label .competition-form__icon-yes {
+  position: absolute;
+  display: block;
+  top: 7px;
+  left: 8px;
+}
+
+.competition-form__radio {
+  display: none;
+
+  & + label::before {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: -4px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid @grey-borders;
+    border-radius: 50%;
+    background-color: @white;
+  }
+
+  &:hover + label::before {
+    border-color: @midnight-grey;
+  }
+
+  &:focus + label::before,
+  &:active + label::before {
+    border-color: @pink;
+  }
+
+  &:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 13px;
+    width: 15px;
+    height: 15px;
+    background-color: @pink;
+    border-radius: 50%;
+  }
 }
 
 .competition-form__button-wrapper {
-  padding: 0 20px;
+  padding: 0 20px 17px;
 
   @media (min-width: @tablet-width) {
     order: 6;
@@ -294,6 +402,7 @@
 
   @media (min-width: @desktop-width) {
     width: 940px;
+    margin: 0 auto;
   }
 }
 
@@ -308,6 +417,8 @@
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+  padding-top: 34px;
 
   &::first-letter {
     color: @pink;

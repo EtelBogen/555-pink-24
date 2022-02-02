@@ -3,21 +3,38 @@
   line-height: 30px;
   color: @midnight-grey;
   text-align: center;
-  padding: 0 20px;
+  padding: 44px 20px 35px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 30px;
+    padding: 91px 45px 62px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 940px;
+    max-width: 635px;
     margin: 0 auto;
+    padding-bottom: 74px;
   }
 
   &--mobile-hidden {
     @media (max-width: @mobile-width-only) {
       display: none;
+    }
+  }
+
+  &--bottom {
+    padding-top: 23px;
+    padding-bottom: 42px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 67px;
+      padding-bottom: 69px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 56px;
     }
   }
 }
