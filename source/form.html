@@ -56,33 +56,33 @@
         </div>
       </nav>
 
-      <h1 class="page-header__header">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <h1 class="page-header__header page-header__header--form">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </header>
 
     <main class="page-main">
       <p class="visually-hidden">Форма регистрации участников конкурса.</p>
-      <p class="page-main__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="page-main__description--mobile-hidden">Пожалуйста, заполните форму ниже:</span></p>
+      <p class="page-main__description page-main__description--form">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="page-main__description--mobile-hidden">Пожалуйста, заполните форму ниже:</span></p>
       <form class="competition-form" name="competition-form" method="post" action="https://echo.htmlacademy.ru">
         <div class="competition-form__fields competition-form__fields--personal-data">
           <p class="visually-hidden">Личные данные.</p>
-          <p class="competition-form__field">
+          <p class="competition-form__field competition-form__field--personal-data">
             <label class="competition-form__label" for="surname">Фамилия:</label>
             <input class="competition-form__input" id="surname" type="text" name="surname" placeholder="Укажите фамилию *">
           </p>
-          <p class="competition-form__field">
+          <p class="competition-form__field competition-form__field--personal-data">
             <label class="competition-form__label" for="name">Имя:</label>
             <input class="competition-form__input" id="name" type="text" name="name" placeholder="Введите ваше имя *">
           </p>
-          <p class="competition-form__field">
+          <p class="competition-form__field competition-form__field--personal-data">
             <label class="competition-form__label" for="second-name">Отчество:</label>
             <input class="competition-form__input" id="second-name" type="text" name="second-name" placeholder="Ну и отчество тоже">
           </p>
         </div>
         <div class="competition-form__fields competition-form__fields--grey competition-form__fields--achievements">
           <div class="competition-form__fields-wrapper">
-            <p class="competition-form__legend competition-form__legend--min">Ваши безбашенные достижения в путешествии</p>
-            <ul class="competition-form__list">
-              <li class="competition-form__item">
+            <p class="competition-form__legend competition-form__legend--achievement">Ваши безбашенные достижения в путешествии</p>
+            <ul class="competition-form__list competition-form__list--achievements">
+              <li class="competition-form__item competition-form__item--checkbox">
                 <input class="competition-form__checkbox competition-form__checkbox--checked" id="selfie" type="checkbox" name="achievements" value="selfie" checked>
                 <label class="competition-form__checks-label competition-form__checks-label--checkbox" for="selfie">
                   <svg class="competition-form__icon-yes" width="27" height="16">
@@ -91,7 +91,7 @@
                   Сделал селфи с акулой
                 </label>
               </li>
-              <li class="competition-form__item">
+              <li class="competition-form__item competition-form__item--checkbox competition-form__item--cell-2">
                 <input class="competition-form__checkbox competition-form__checkbox--checked" id="beach" type="checkbox" name="achievements" value="beach" checked>
                 <label class="competition-form__checks-label competition-form__checks-label--checkbox" for="beach">
                   <svg class="competition-form__icon-yes" width="27" height="16">
@@ -100,7 +100,7 @@
                   Обгорел на пляже
                 </label>
               </li>
-              <li class="competition-form__item">
+              <li class="competition-form__item competition-form__item--checkbox competition-form__item--cell-3">
                 <input class="competition-form__checkbox" id="chuck" type="checkbox" name="achievements" value="chuck">
                 <label class="competition-form__checks-label competition-form__checks-label--checkbox" for="chuck">
                   <svg class="competition-form__icon-yes" width="27" height="16">
@@ -109,7 +109,7 @@
                   Видел Чака Норриса
                 </label>
               </li>
-              <li class="competition-form__item">
+              <li class="competition-form__item competition-form__item--checkbox">
                 <input class="competition-form__checkbox" id="souvenirs" type="checkbox" name="achievements" value="souvenirs">
                 <label class="competition-form__checks-label competition-form__checks-label--checkbox" for="souvenirs">
                   <svg class="competition-form__icon-yes" width="27" height="16">
@@ -118,7 +118,7 @@
                   Накупил сувениров
                 </label>
               </li>
-              <li class="competition-form__item">
+              <li class="competition-form__item competition-form__item--checkbox competition-form__item--cell-2">
                 <input class="competition-form__checkbox competition-form__checkbox--checked" id="tower" type="checkbox" name="achievements" value="tower" checked>
                 <label class="competition-form__checks-label competition-form__checks-label--checkbox" for="tower">
                   <svg class="competition-form__icon-yes" width="27" height="16">
@@ -127,7 +127,7 @@
                   Удержал башню
                 </label>
               </li>
-              <li class="competition-form__item">
+              <li class="competition-form__item competition-form__item--checkbox competition-form__item--cell-3">
                 <input class="competition-form__checkbox" id="hotel" type="checkbox" name="achievements" value="hotel">
                 <label class="competition-form__checks-label competition-form__checks-label--checkbox" for="hotel">
                   <svg class="competition-form__icon-yes" width="27" height="16">
@@ -142,7 +142,7 @@
 
         <div class="competition-form__fields competition-form__fields--contacts-data">
           <div class="competition-form__fields-wrapper">
-            <p class="competition-form__legend competition-form__legend--hidden">Контактные данные</p>
+            <p class="competition-form__legend competition-form__legend--contacts-data competition-form__legend--hidden">Контактная информация</p>
             <div class="competition-form__wrapper--contacts">
               <p class="competition-form__field competition-form__field--contacts-data competition-form__field--phone">
                 <label class="competition-form__label competition-form__label--contacts-data" for="phone">Номер телефона</label>
@@ -177,7 +177,7 @@
         </fieldset>
 
         <div class="competition-form__fields competition-form__fields--emotions">
-          <div class="competition-form__fields-wrapper">
+          <div class="competition-form__fields-wrapper competition-form__fields-wrapper--emotions">
             <p class="competition-form__legend competition-form__legend--emotions">Опишите свои эмоции</p>
             <p class="competition-form__field">
               <label class="visually-hidden" for="emotions">Поле для описания своих эмоций.</label>
@@ -189,7 +189,7 @@
         <div class="competition-form__button-wrapper">
           <button class="competition-form__button button-form" type="submit" value="Отправить форму">Отправить форму</button>
           <p class="competition-form__footnote">
-            <span>*</span> — обязательные поля
+            <span>*</span> — обязательные <span class="competition-form__visually-hidden">для заполнения</span> поля
           </p>
         </div>
       </form>
