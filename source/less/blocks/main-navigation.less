@@ -8,12 +8,12 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    background-color: fade(@black, 30);
+    background-color: @black-opacity-3;
     width: 100%;
   }
 
   &--closed {
-    background-color: fade(@black, 30);
+    background-color: @black-opacity-3;
   }
 
   &--closed .site-list__item {
@@ -26,9 +26,15 @@
     border-bottom: 1px solid @black;
   }
 
-  &--nojs .main-nav__toggle {
+  &--nojs .main-navigation__toggle {
     @media (max-width: @without-table) {
       display: none;
+    }
+  }
+
+  &--nojs .main-navigation__list {
+    @media (max-width: @without-table) {
+      position: relative;
     }
   }
 }
@@ -126,11 +132,11 @@
   }
 }
 
-.main-navigation--opened .main-navigation__toggle--open {
+.main-navigation--opened .main-navigation__icon--burger {
   display: none;
 }
 
-.main-navigation--closed .main-navigation__toggle--close {
+.main-navigation--closed .main-navigation__icon--cross {
   display: none;
 }
 

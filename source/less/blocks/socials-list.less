@@ -8,11 +8,12 @@
 
   @media (min-width: @tablet-width) {
     min-width: 205px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 176px;
-    margin-left: 9px;
+    min-width: 181px;
+    margin-left: 7px;
     justify-content: space-around;
   }
 }
@@ -27,7 +28,7 @@
   font-size: 0;
   line-height: 0;
   background-color: @white;
-  border: 3px solid fade(@midnight-grey, 10);
+  border: 3px solid @midnight-grey-opacity-1;
   border-radius: 50%;
 
   @media (min-width: @desktop-width) {
@@ -39,11 +40,11 @@
   }
 
   &:active {
-    border-color: #e9ebec;
+    border-color: @midnight-grey-opacity-1;
   }
 
-  &:active .page-footer__social-logo {
-    fill: fade(@pink, 30);
+  &:active .socials-list__icon {
+    opacity: 0.3;
   }
 }
 

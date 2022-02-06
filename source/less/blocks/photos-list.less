@@ -8,7 +8,7 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
     grid-template-rows: repeat(3, 1fr);
-    row-gap: 20px;
+    row-gap: 19px;
   }
 
   @media (min-width: @desktop-width) {
@@ -28,44 +28,15 @@
     padding-bottom: 0;
   }
 
-  &--top {
-    @media (min-width: @tablet-width) {
-      padding-bottom: 49px;
-    }
-
-    &::after {
-      content: "Панорама дня";
-      position: absolute;
-      top: 0;
-      right: 20px;
-      padding-top: 6px;
-      padding-left: 19px;
-      padding-right: 11px;
-      width: 110px;
-      height: 29px;
-      background-color: @pink;
-      color: @white;
-      font-size: 12px;
-      line-height: 24px;
-      font-weight: 700;
-      text-transform: uppercase;
-
-      @media (min-width: @tablet-width) {
-        top: 57px;
-      }
-
-      @media (min-width: @desktop-width) {
-        top: 54px;
-        right: 130px;
-      }
-    }
-  }
-
   &--max {
-    padding-bottom: 21px;
+    padding-bottom: 20px;
 
     @media (min-width: @tablet-width) {
       padding-bottom: 0;
     }
+  }
+
+  &:last-of-type {
+    padding-top: 1px;
   }
 }

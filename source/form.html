@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -12,41 +15,39 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <nav class="page-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
+      <nav class="page-header__navigation main-navigation main-navigation--closed main-navigation--nojs"> <!-- main-navigation--opened — класс для открытия меню вместо main-navigation--closed при отсутствии js-->
         <div class="main-navigation__wrapper">
           <div class="main-navigation__logo-wrapper">
             <a class="main-navigation__logo logo" href="index.html">
-              <svg class="logo__header logo__header--mobile" width="74" height="23" alt="Главная страница сайта приложения Пинк.">
+              <span class="visually-hidden">Главная страница сайта приложения Пинк.</span>
+              <svg class="logo__header logo__header--mobile" width="74" height="23">
                 <use href="img/sprite.svg#logo-pink-white-mobile"></use>
               </svg>
-              <svg class="logo__header logo__header--tablet" width="145" height="40" alt="Главная страница сайта приложения Пинк.">
+              <svg class="logo__header logo__header--tablet" width="145" height="40">
                 <use href="img/sprite.svg#logo-pink-white-tablet"></use>
               </svg>
-              <svg class="logo__header logo__header--desktop" width="147" height="40" alt="Главная страница сайта приложения Пинк.">
+              <svg class="logo__header logo__header--desktop" width="147" height="40">
                 <use href="img/sprite.svg#logo-pink-white-desktop"></use>
               </svg>
             </a>
             <button class="main-navigation__toggle main-navigation__toggle--open" type="button">
+              <span class="visually-hidden">Меню.</span>
               <svg class="main-navigation__icon main-navigation__icon--burger" width="50" height="24">
                 <use href="img/sprite.svg#icon-menu-burger"></use>
               </svg>
-              <span class="visually-hidden">Открыть меню.</span>
-            </button>
-            <button class="main-navigation__toggle main-navigation__toggle--close" type="button">
               <svg class="main-navigation__icon main-navigation__icon--cross" width="24" height="24">
                 <use href="img/sprite.svg#icon-menu-cross"></use>
               </svg>
-              <span class="visually-hidden">Открыть меню.</span>
             </button>
           </div>
           <ul class="main-navigation__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item">
               <a class="site-list__href" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__href" href="catalog.html">Фотографии</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--active">
               <a class="site-list__href">Конкурс</a>
             </li>
             <li class="site-list__item">
@@ -61,7 +62,7 @@
 
     <main class="page-main">
       <p class="visually-hidden">Форма регистрации участников конкурса.</p>
-      <p class="page-main__description page-main__description--form">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="page-main__description--mobile-hidden">Пожалуйста, заполните форму ниже:</span></p>
+      <p class="page-main__description page-main__description--form">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="page-main__description-mobile-hidden">Пожалуйста, заполните форму ниже:</span></p>
       <form class="competition-form" name="competition-form" method="post" action="https://echo.htmlacademy.ru">
         <div class="competition-form__fields competition-form__fields--personal-data">
           <p class="visually-hidden">Личные данные.</p>
@@ -83,7 +84,7 @@
             <p class="competition-form__legend competition-form__legend--achievement">Ваши безбашенные достижения в путешествии</p>
             <ul class="competition-form__list competition-form__list--achievements">
               <li class="competition-form__item competition-form__item--checkbox">
-                <input class="competition-form__checkbox competition-form__checkbox--checked" id="selfie" type="checkbox" name="achievements" value="selfie" checked>
+                <input class="visually-hidden competition-form__checkbox competition-form__checkbox--checked" id="selfie" type="checkbox" name="achievements" value="selfie" checked>
                 <label class="competition-form__checks-label competition-form__checks-label--checkbox" for="selfie">
                   <svg class="competition-form__icon-yes" width="27" height="16">
                     <use href="img/sprite.svg#icon-yes"></use>
@@ -92,7 +93,7 @@
                 </label>
               </li>
               <li class="competition-form__item competition-form__item--checkbox competition-form__item--cell-2">
-                <input class="competition-form__checkbox competition-form__checkbox--checked" id="beach" type="checkbox" name="achievements" value="beach" checked>
+                <input class="visually-hidden competition-form__checkbox competition-form__checkbox--checked" id="beach" type="checkbox" name="achievements" value="beach" checked>
                 <label class="competition-form__checks-label competition-form__checks-label--checkbox" for="beach">
                   <svg class="competition-form__icon-yes" width="27" height="16">
                     <use href="img/sprite.svg#icon-yes"></use>
@@ -101,7 +102,7 @@
                 </label>
               </li>
               <li class="competition-form__item competition-form__item--checkbox competition-form__item--cell-3">
-                <input class="competition-form__checkbox" id="chuck" type="checkbox" name="achievements" value="chuck">
+                <input class="visually-hidden competition-form__checkbox" id="chuck" type="checkbox" name="achievements" value="chuck">
                 <label class="competition-form__checks-label competition-form__checks-label--checkbox" for="chuck">
                   <svg class="competition-form__icon-yes" width="27" height="16">
                     <use href="img/sprite.svg#icon-yes"></use>
@@ -110,7 +111,7 @@
                 </label>
               </li>
               <li class="competition-form__item competition-form__item--checkbox">
-                <input class="competition-form__checkbox" id="souvenirs" type="checkbox" name="achievements" value="souvenirs">
+                <input class="visually-hidden competition-form__checkbox" id="souvenirs" type="checkbox" name="achievements" value="souvenirs">
                 <label class="competition-form__checks-label competition-form__checks-label--checkbox" for="souvenirs">
                   <svg class="competition-form__icon-yes" width="27" height="16">
                     <use href="img/sprite.svg#icon-yes"></use>
@@ -119,7 +120,7 @@
                 </label>
               </li>
               <li class="competition-form__item competition-form__item--checkbox competition-form__item--cell-2">
-                <input class="competition-form__checkbox competition-form__checkbox--checked" id="tower" type="checkbox" name="achievements" value="tower" checked>
+                <input class="visually-hidden competition-form__checkbox competition-form__checkbox--checked" id="tower" type="checkbox" name="achievements" value="tower" checked>
                 <label class="competition-form__checks-label competition-form__checks-label--checkbox" for="tower">
                   <svg class="competition-form__icon-yes" width="27" height="16">
                     <use href="img/sprite.svg#icon-yes"></use>
@@ -128,7 +129,7 @@
                 </label>
               </li>
               <li class="competition-form__item competition-form__item--checkbox competition-form__item--cell-3">
-                <input class="competition-form__checkbox" id="hotel" type="checkbox" name="achievements" value="hotel">
+                <input class="visually-hidden competition-form__checkbox" id="hotel" type="checkbox" name="achievements" value="hotel">
                 <label class="competition-form__checks-label competition-form__checks-label--checkbox" for="hotel">
                   <svg class="competition-form__icon-yes" width="27" height="16">
                     <use href="img/sprite.svg#icon-yes"></use>
@@ -143,7 +144,7 @@
         <div class="competition-form__fields competition-form__fields--contacts-data">
           <div class="competition-form__fields-wrapper">
             <p class="competition-form__legend competition-form__legend--contacts-data competition-form__legend--hidden">Контактная информация</p>
-            <div class="competition-form__wrapper--contacts">
+            <div class="competition-form__wrapper-contacts">
               <p class="competition-form__field competition-form__field--contacts-data competition-form__field--phone">
                 <label class="competition-form__label competition-form__label--contacts-data" for="phone">Номер телефона</label>
                 <input class="competition-form__input" id="phone" type="tel" name="phone" placeholder="Номер, пожалуйста">
@@ -156,25 +157,25 @@
           </div>
         </div>
 
-        <fieldset class="competition-form__fields competition-form__fields--grey competition-form__fields--applications">
-          <div class="competition-form__fields-wrapper">
-            <legend class="competition-form__legend competition-form__legend--applications">С каким приложением путешествовали?</legend>
-            <ul class="competition-form__list">
+        <div class="competition-form__fields competition-form__fields--grey competition-form__fields--applications">
+          <p class="competition-form__legend competition-form__legend--applications">С каким приложением путешествовали?</p>
+          <div class="competition-form__fields-wrapper competition-form__fields-wrapper--applications">
+            <ul class="competition-form__list competition-form__list--applications">
               <li class="competition-form__item competition-form__item--applications">
-                <input class="competition-form__radio competition-form__radio--checked" id="iOS" type="radio" name="applications" value="iOS" checked>
+                <input class="visually-hidden competition-form__radio competition-form__radio--checked" id="iOS" type="radio" name="applications" value="iOS" checked>
                 <label class="competition-form__checks-label competition-form__checks-label--applications" for="iOS">Pink для iOS</label>
               </li>
               <li class="competition-form__item competition-form__item--applications">
-                <input class="competition-form__radio" id="android" type="radio" name="applications" value="android">
+                <input class="visually-hidden competition-form__radio" id="android" type="radio" name="applications" value="android">
                 <label class="competition-form__checks-label competition-form__checks-label--applications" for="android">Pink на Android</label>
               </li>
               <li class="competition-form__item competition-form__item--applications">
-                <input class="competition-form__radio" id="windows" type="radio" name="applications" value="windows">
+                <input class="visually-hidden competition-form__radio" id="windows" type="radio" name="applications" value="windows">
                 <label class="competition-form__checks-label competition-form__checks-label--applications" for="windows">Windows Phone</label>
               </li>
             </ul>
           </div>
-        </fieldset>
+        </div>
 
         <div class="competition-form__fields competition-form__fields--emotions">
           <div class="competition-form__fields-wrapper competition-form__fields-wrapper--emotions">
@@ -198,10 +199,11 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo logo" href="index.html">
-          <svg class="logo__footer logo__footer--mobile" width="148" height="40" alt="Главная страница сайта приложения Пинк.">
+          <span class="visually-hidden">Главная страница сайта приложения Пинк.</span>
+          <svg class="logo__footer logo__footer--mobile" width="148" height="40">
             <use href="img/sprite.svg#logo-pink-blue-mobile"></use>
           </svg>
-          <svg class="logo__footer logo__footer--desktop" width="148" height="40" alt="Главная страница сайта приложения Пинк.">
+          <svg class="logo__footer logo__footer--desktop" width="148" height="40">
             <use href="img/sprite.svg#logo-pink-blue-desktop"></use>
           </svg>
         </a>
@@ -242,21 +244,21 @@
         </div>
       </div>
     </footer>
-    <div class="modal modal--success modal__form modal__form--success">
+    <div class="modal modal--success">
       <section class="modal__body modal__body--success">
         <h2 class="modal__header">Ваша заявка отправлена</h2>
         <p class="modal__text modal__text--success">
           Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
         </p>
         <div class="modal__button-wrapper">
-          <button class="button-form" type="submit">Закрыть окно</button>
+          <button class="button-form button-form--success" type="submit">Закрыть окно</button>
         </div>
       </section>
     </div>
-    <div class="modal modal__form modal__form--error">
+    <div class="modal modal--error">
       <section class="modal__body modal__body--error">
-        <h2 class="modal__header">Что-то пошло не так!</h2>
-        <p class="modal__text">
+        <h2 class="modal__header modal__header--error">Что-то пошло не так!</h2>
+        <p class="modal__text modal__text--error">
           Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить.
         </p>
         <div class="modal__button-wrapper modal__button-wrapper--error">

@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -12,39 +15,37 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <nav class="page-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
+      <nav class="page-header__navigation main-navigation main-navigation--closed main-navigation--nojs"> <!-- main-navigation--opened — класс для открытия меню вместо main-navigation--closed при отсутствии js-->
         <div class="main-navigation__wrapper">
           <div class="main-navigation__logo-wrapper">
             <a class="main-navigation__logo logo" href="index.html">
-              <svg class="logo__header logo__header--mobile" width="74" height="23" alt="Главная страница сайта приложения Пинк.">
+              <span class="visually-hidden">Главная страница сайта приложения Пинк.</span>
+              <svg class="logo__header logo__header--mobile" width="74" height="23">
                 <use href="img/sprite.svg#logo-pink-white-mobile"></use>
               </svg>
-              <svg class="logo__header logo__header--tablet" width="145" height="40" alt="Главная страница сайта приложения Пинк.">
+              <svg class="logo__header logo__header--tablet" width="145" height="40">
                 <use href="img/sprite.svg#logo-pink-white-tablet"></use>
               </svg>
-              <svg class="logo__header logo__header--desktop" width="147" height="40" alt="Главная страница сайта приложения Пинк.">
+              <svg class="logo__header logo__header--desktop" width="147" height="40">
                 <use href="img/sprite.svg#logo-pink-white-desktop"></use>
               </svg>
             </a>
             <button class="main-navigation__toggle main-navigation__toggle--open" type="button">
+              <span class="visually-hidden">Меню.</span>
               <svg class="main-navigation__icon main-navigation__icon--burger" width="50" height="24">
                 <use href="img/sprite.svg#icon-menu-burger"></use>
               </svg>
-              <span class="visually-hidden">Открыть меню.</span>
-            </button>
-            <button class="main-navigation__toggle main-navigation__toggle--close" type="button">
               <svg class="main-navigation__icon main-navigation__icon--cross" width="24" height="24">
                 <use href="img/sprite.svg#icon-menu-cross"></use>
               </svg>
-              <span class="visually-hidden">Открыть меню.</span>
             </button>
           </div>
           <ul class="main-navigation__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__href">Главная</a>
-            </li>
             <li class="site-list__item">
-              <a class="site-list__href" href="catalog.html">Фотографии</a>
+              <a class="site-list__href" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__href">Фотографии</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__href" href="form.html">Конкурс</a>
@@ -66,10 +67,13 @@
 
       <section class="photos">
         <h2 class="visually-hidden">Лента фотографий.</h2>
-        <div class="photos-list__item photos-list__item--top photo-item">
+        <div class="photos__panorama photo-item photo-item--top">
           <h3 class="visually-hidden">Топ дня</h3>
           <a class="photo-item__href" href="#">
             <picture class="photo-item__picture">
+              <source type="image/webp" media="(min-width: 980px)" srcset="img/jpg/panorama-desktop@1x.webp 1x, img/jpg/panorama-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/jpg/panorama-desktop@2x.webp 1x, img/jpg/panorama-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/jpg/panorama-desktop@1x.webp 1x, img/jpg/panorama-desktop@2x.webp 2x">
               <source media="(min-width: 980px)" srcset="img/jpg/panorama-desktop@1x.jpg 1x, img/jpg/panorama-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/jpg/panorama-tablet@1x.jpg 1x, img/jpg/panorama-tablet@2x.jpg 2x">
               <img class="photo-item__img photo-item__img--top" width="320" height="137" src="img/jpg/panorama-mobile@1x.jpg" srcset="img/jpg/panorama-mobile@2x.jpg 2x" alt="Фотография Анны.">
@@ -77,7 +81,7 @@
           </a>
           <div class="photos__feed">
             <div class="photo-item__description photo-item__description--top">
-              <p class="photo-item__author">Анна <time class="photo-item__timestamp">(5 минут назад)</time></p>
+              <p class="photo-item__author">Анна <time class="photo-item__timestamp" datetime="2022-02-03T18:55">(5 минут назад)</time></p>
               <p class="photo-item__text photo-item__text--top">
                 Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
               </p>
@@ -89,29 +93,35 @@
           <li class="photos-list__item photo-item">
             <a href="#">
               <picture class="photo-item__picture photo-item__picture--top">
+                <source type="image/webp" media="(min-width: 980px)" srcset="img/jpg/photo-car-desktop@1x.webp 1x, img/jpg/photo-car-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/jpg/photo-car-desktop@2x.webp 1x, img/jpg/photo-car-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/jpg/photo-car-desktop@1x.webp 1x, img/jpg/photo-car-desktop@2x.webp 2x">
                 <source media="(min-width: 980px)" srcset="img/jpg/photo-car-desktop@1x.jpg 1x, img/jpg/photo-car-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/jpg/photo-car-tablet@1x.jpg 1x, img/jpg/photo-car-tablet@2x.jpg 2x">
                 <img class="photo-item__img" width="280" height="180" src="img/jpg/photo-car-mobile@1x.jpg" srcset="img/jpg/photo-car-mobile@2x.jpg 2x" alt="Фотография Левона.">
               </picture>
             </a>
             <div class="photo-item__description">
-              <p class="photo-item__author">Левон <time class="photo-item__timestamp">(5 часов назад)</time></p>
+              <p class="photo-item__author">Левон <time class="photo-item__timestamp" datetime="2022-02-03T14:00">(5 часов назад)</time></p>
               <p class="photo-item__text">
                 Вчера он на луну летал, сегодня в руки к нам попал.
               </p>
               <button class="photo-item__likes" type="button">Нравится: <span class="photo-item__likes-number">356</span></button>
             </div>
           </li>
-          <li class="photos-list__item photo-item">
+          <li class="photos-list__item photos-list__item--max photo-item">
             <a href="#">
               <picture class="photo-item__picture">
+                <source type="image/webp" media="(min-width: 980px)" srcset="img/jpg/photo-drumset-desktop@1x.webp 1x, img/jpg/photo-drumset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/jpg/photo-drumset-desktop@2x.webp 1x, img/jpg/photo-drumset-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/jpg/photo-drumset-desktop@1x.webp 1x, img/jpg/photo-drumset-desktop@2x.webp 2x">
                 <source media="(min-width: 980px)" srcset="img/jpg/photo-drumset-desktop@1x.jpg 1x, img/jpg/photo-drumset-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/jpg/photo-drumset-tablet@1x.jpg 1x, img/jpg/photo-drumset-tablet@2x.jpg 2x">
                 <img class="photo-item__img" width="280" height="180" src="img/jpg/photo-drumset-mobile@1x.jpg" srcset="img/jpg/photo-drumset-mobile@2x.jpg 2x" alt="Фотография Антона.">
               </picture>
             </a>
             <div class="photo-item__description">
-              <p class="photo-item__author">Антон <time class="photo-item__timestamp">(12 часов назад)</time></p>
+              <p class="photo-item__author">Антон <time class="photo-item__timestamp" datetime="2022-02-03T07:00">(12 часов назад)</time></p>
               <p class="photo-item__text">
                 Соседи будут рады!
               </p>
@@ -121,13 +131,16 @@
           <li class="photos-list__item photos-list__item--max photo-item">
             <a href="#">
               <picture class="photo-item__picture">
+                <source type="image/webp" media="(min-width: 980px)" srcset="img/jpg/photo-window-desktop@1x.webp 1x, img/jpg/photo-window-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/jpg/photo-window-tablet@2x.webp 1x, img/jpg/photo-window-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/jpg/photo-window-mobile@1x.webp 1x, img/jpg/photo-window-mobile@2x.webp 2x">
                 <source media="(min-width: 980px)" srcset="img/jpg/photo-window-desktop@1x.jpg 1x, img/jpg/photo-window-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/jpg/photo-window-tablet@1x.jpg 1x, img/jpg/photo-window-tablet@2x.jpg 2x">
                 <img class="photo-item__img" width="280" height="180" src="img/jpg/photo-window-mobile@1x.jpg" srcset="img/jpg/photo-window-mobile@2x.jpg 2x" alt="Фотография Бориса.">
               </picture>
             </a>
             <div class="photo-item__description">
-              <p class="photo-item__author">Борис <time class="photo-item__timestamp">(20 часов назад)</time></p>
+              <p class="photo-item__author">Борис <time class="photo-item__timestamp" datetime="2022-02-02T23:00">(20 часов назад)</time></p>
               <p class="photo-item__text">
                 Здесь могла быть ваша цитата о высоком и вечном.
               </p>
@@ -137,13 +150,16 @@
           <li class="photos-list__item photos-list__item--max photo-item">
             <a href="#">
               <picture class="photo-item__picture">
+                <source type="image/webp" media="(min-width: 980px)" srcset="img/jpg/photo-fair-desktop@1x.webp 1x, img/jpg/photo-fair-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/jpg/photo-fair-tablet@2x.webp 1x, img/jpg/photo-fair-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/jpg/photo-fair-mobile@1x.webp 1x, img/jpg/photo-fair-mobile@2x.webp 2x">
                 <source media="(min-width: 980px)" srcset="img/jpg/photo-fair-desktop@1x.jpg 1x, img/jpg/photo-fair-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/jpg/photo-fair-tablet@1x.jpg 1x, img/jpg/photo-fair-tablet@2x.jpg 2x">
                 <img class="photo-item__img" width="280" height="180" src="img/jpg/photo-fair-mobile@1x.jpg" srcset="img/jpg/photo-fair-mobile@2x.jpg 2x" alt="Фотография Сергея.">
               </picture>
             </a>
             <div class="photo-item__description">
-              <p class="photo-item__author">Сергей <time class="photo-item__timestamp">(25 часов назад)</time></p>
+              <p class="photo-item__author">Сергей <time class="photo-item__timestamp" datetime="2022-02-02T18:00">(25 часов назад)</time></p>
               <p class="photo-item__text">
                 Самая кубанская в мире!
               </p>
@@ -153,13 +169,16 @@
           <li class="photos-list__item photos-list__item--max photo-item">
             <a href="#">
               <picture class="photo-item__picture">
+                <source type="image/webp" media="(min-width: 980px)" srcset="img/jpg/photo-pov-desktop@1x.webp 1x, img/jpg/photo-pov-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/jpg/photo-pov-tablet@2x.webp 1x, img/jpg/photo-pov-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/jpg/photo-pov-mobile@1.webp 1x, img/jpg/photo-pov-mobile@2.webp 2x">
                 <source media="(min-width: 980px)" srcset="img/jpg/photo-pov-desktop@1x.jpg 1x, img/jpg/photo-pov-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/jpg/photo-pov-tablet@1x.jpg 1x, img/jpg/photo-pov-tablet@2x.jpg 2x">
                 <img class="photo-item__img" width="280" height="180" src="img/jpg/photo-pov-mobile@1x.jpg" srcset="img/jpg/photo-pov-mobile@2x.jpg 2x" alt="Фотография Максима.">
               </picture>
             </a>
             <div class="photo-item__description">
-              <p class="photo-item__author">Максим <time class="photo-item__timestamp">(40 часов назад)</time></p>
+              <p class="photo-item__author">Максим <time class="photo-item__timestamp" datetime="2022-02-02T03:00">(40 часов назад)</time></p>
               <p class="photo-item__text">
                 Где снег-то?
               </p>
@@ -169,13 +188,16 @@
           <li class="photos-list__item photo-item">
             <a href="#">
               <picture class="photo-item__picture">
+                <source type="image/webp" media="(min-width: 980px)" srcset="img/jpg/photo-wing-desktop@1x.webp 1x, img/jpg/photo-wing-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/jpg/photo-wing-tablet@2x.webp 1x, img/jpg/photo-wing-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/jpg/photo-wing-mobile@1x.webp 1x, img/jpg/photo-wing-mobile@2x.webp 2x">
                 <source media="(min-width: 980px)" srcset="img/jpg/photo-wing-desktop@1x.jpg 1x, img/jpg/photo-wing-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/jpg/photo-wing-tablet@1x.jpg 1x, img/jpg/photo-wing-tablet@2x.jpg 2x">
                 <img class="photo-item__img" width="280" height="180" src="img/jpg/photo-wing-mobile@1x.jpg" srcset="img/jpg/photo-wing-mobile@2x.jpg 2x" alt="Фотография Надежды.">
               </picture>
             </a>
             <div class="photo-item__description">
-              <p class="photo-item__author">Надежда <time class="photo-item__timestamp">(45 часов назад)</time></p>
+              <p class="photo-item__author">Надежда <time class="photo-item__timestamp" datetime="2022-02-01T22:00">(45 часов назад)</time></p>
               <p class="photo-item__text">
                 Всем GM и взаимные лайки!
               </p>
@@ -193,6 +215,9 @@
         <div class="editor__wrapper">
           <h2 class="visually-hidden">Редактор фотографий.</h2>
           <picture>
+            <source type="image/webp" media="(min-width: 980px)" srcset="img/jpg/photo-road-desktop@1x.webp 1x, img/jpg/photo-road-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/jpg/photo-road-tablet@2x.webp 1x, img/jpg/photo-road-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/jpg/photo-road-mobile@1x.webp 1x, img/jpg/photo-road-mobile@2x.webp 2x">
             <source media="(min-width: 980px)" srcset="img/jpg/photo-road-desktop@1x.jpg 1x, img/jpg/photo-road-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/jpg/photo-road-tablet@1x.jpg 1x, img/jpg/photo-road-tablet@2x.jpg 2x">
             <img class="editor__photo" width="280" height="374" src="img/jpg/photo-road-mobile@1x.jpg" srcset="img/jpg/photo-road-mobile@2x.jpg 2x" alt="Фотография для редактирования.">
@@ -200,9 +225,9 @@
           <div class="editor__instruments">
             <ul class="editor__tools">
               <li class="editor__tool editor__tool--active">
-                <div class="editor__bar">
+                <div class="editor__bar editor__bar--crop">
                   <span class="visually-hidden">Обрезать</span>
-                  <svg class="editor__item editor__item--active editor__item--crop" width="44" height="44">
+                  <svg class="editor__item editor__item--active editor__item--crop" width="48" height="48">
                     <use href="img/sprite.svg#icon-editor-crop"></use>
                   </svg>
                 </div>
@@ -210,26 +235,26 @@
                   <div class=" editor__toggle editor__toggle--crop"></div>
                 </div>
               </li>
-              <li class="editor__tool editor__tool--color editor__tool--inactive">
-                <div class="editor__bar editor__bar--color">
+              <li class="editor__tool editor__tool--fill editor__tool--inactive">
+                <div class="editor__bar editor__bar--fill">
                   <span class="visually-hidden">Цвет</span>
-                  <svg class="editor__item editor__item--fill" width="48" height="46">
+                  <svg class="editor__item editor__item--fill" width="48" height="49">
                     <use href="img/sprite.svg#icon-editor-fill"></use>
                   </svg>
                 </div>
-                <div class="editor__scale editor__scale--color">
-                  <div class="editor__toggle editor__toggle--color"></div>
+                <div class="editor__scale editor__scale--fill">
+                  <div class="editor__toggle editor__toggle--fill"></div>
                 </div>
               </li>
-              <li class="editor__tool editor__tool--bright editor__tool--inactive">
-                <div class="editor__bar editor__bar--bright">
+              <li class="editor__tool editor__tool--contrast editor__tool--inactive">
+                <div class="editor__bar editor__bar--contrast">
                   <span class="visually-hidden">Яркость</span>
                   <svg class="editor__item editor__item--contrast" width="32" height="32">
                     <use href="img/sprite.svg#icon-editor-contrast"></use>
                   </svg>
                 </div>
-                <div class="editor__scale editor__scale--bright">
-                  <div class="editor__toggle editor__toggle--bright"></div>
+                <div class="editor__scale editor__scale--contrast">
+                  <div class="editor__toggle editor__toggle--contrast"></div>
                 </div>
               </li>
             </ul>
@@ -246,10 +271,11 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper page-footer__wrapper--catalog">
         <a class="page-footer__logo logo" href="index.html">
-          <svg class="logo__footer logo__footer--mobile" width="148" height="40" alt="Главная страница сайта приложения Пинк.">
+          <span class="visually-hidden">Главная страница сайта приложения Пинк.</span>
+          <svg class="logo__footer logo__footer--mobile" width="148" height="40">
             <use href="img/sprite.svg#logo-pink-blue-mobile"></use>
           </svg>
-          <svg class="logo__footer logo__footer--desktop" width="148" height="40" alt="Главная страница сайта приложения Пинк.">
+          <svg class="logo__footer logo__footer--desktop" width="148" height="40">
             <use href="img/sprite.svg#logo-pink-blue-desktop"></use>
           </svg>
         </a>
