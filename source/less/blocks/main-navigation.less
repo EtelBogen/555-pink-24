@@ -26,15 +26,25 @@
     border-bottom: 1px solid @black;
   }
 
-  &--nojs .main-navigation__toggle {
-    @media (max-width: @without-table) {
-      display: none;
-    }
-  }
+  &--nojs {
+    background-color: @midnight-grey;
 
-  &--nojs .main-navigation__list {
     @media (max-width: @without-table) {
-      position: relative;
+      .main-navigation__toggle {
+        display: none;
+      }
+
+      .site-list__item {
+        display: block;
+      }
+
+      .main-navigation__list {
+        position: relative;
+      }
+
+      .main-navigation__logo-wrapper {
+        border-bottom: 1px solid @black;
+      }
     }
   }
 }
